@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users List</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 40px;
+            font-family: Inter, sans-serif;
+            background: url('https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=1600')
+                center/cover no-repeat fixed;
+            color: #fff;
+        }
+
+        .overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.48);
+            backdrop-filter: blur(6px);
+            z-index: -1;
+        }
+
+        .page-title {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 25px;
+            font-weight: 700;
+        }
+
+        .table-container {
+            max-width: 1100px;
+            margin: auto;
+            background: rgba(255, 255, 255, 0.06);
+            backdrop-filter: blur(8px);
+            padding: 25px;
+            border-radius: 16px;
+            border: 1px solid rgba(255,255,255,0.1);
+            box-shadow: 0 0 20px rgba(0,0,0,0.25);
+        }
+
+        .user-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        .user-table thead {
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .user-table th {
+            padding: 14px;
+            text-align: left;
+            font-weight: 700;
+            font-size: 15px;
+            border-bottom: 1px solid rgba(255,255,255,0.18);
+        }
+
+        .user-table td {
+            padding: 12px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            font-size: 14px;
+        }
+
+        .user-table tr:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transition: 0.3s;
+        }
+
+        /* STATUS BADGES */
+        .status {
+            padding: 6px 14px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 13px;
+            display: inline-block;
+        }
+
+        .active {
+            background: rgba(0, 255, 120, 0.22);
+            color: #00ff91;
+        }
+
+        .pending {
+            background: rgba(255, 196, 0, 0.22);
+            color: #ffcc00;
+        }
+
+        .inactive {
+            background: rgba(255, 0, 0, 0.22);
+            color: #ff6969;
+        }
+    </style>
+</head>
+<body>
+
+<div class="overlay"></div>
+
+<h2 class="page-title">Users List</h2>
+
+<div class="table-container">
+<table class="user-table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Mobile</th>
+      <th>PAN</th>
+      <th>SIP Amount</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>Arjun Mehta</td>
+      <td>arjun.mehta@gmail.com</td>
+      <td>98765 44121</td>
+      <td>AMTPM9123Q</td>
+      <td>₹1,000</td>
+      <td><span class="status active">Active</span></td>
+    </tr>
+
+    <tr>
+      <td>Priya Nair</td>
+      <td>priyanair23@yahoo.com</td>
+      <td>91234 55872</td>
+      <td>PRYNA3421N</td>
+      <td>₹2,000</td>
+      <td><span class="status active">Active</span></td>
+    </tr>
+
+    <tr>
+      <td>Akash Verma</td>
+      <td>akashv99@gmail.com</td>
+      <td>99887 11234</td>
+      <td>AKVRM9981L</td>
+      <td>₹500</td>
+      <td><span class="status pending">Pending</span></td>
+    </tr>
+
+    <tr>
+      <td>Neha Kapoor</td>
+      <td>nehaxkapoor@outlook.com</td>
+      <td>90909 66221</td>
+      <td>NHKPR5521M</td>
+      <td>₹1,500</td>
+      <td><span class="status active">Active</span></td>
+    </tr>
+
+    <tr>
+      <td>Rishi Choudhary</td>
+      <td>rishic.official@gmail.com</td>
+      <td>98221 77443</td>
+      <td>RSCCD4452P</td>
+      <td>₹3,000</td>
+      <td><span class="status active">Active</span></td>
+    </tr>
+
+    <tr>
+      <td>Sneha Reddy</td>
+      <td>sneha.reddy@gmail.com</td>
+      <td>70065 34567</td>
+      <td>SNRDY9834V</td>
+      <td>₹750</td>
+      <td><span class="status inactive">Inactive</span></td>
+    </tr>
+
+    <tr>
+      <td>Manish Kumar</td>
+      <td>manish_kumar@gmail.com</td>
+      <td>87654 23456</td>
+      <td>MNKUM2134A</td>
+      <td>₹1,000</td>
+      <td><span class="status active">Active</span></td>
+    </tr>
+
+    <tr>
+      <td>Anika Desai</td>
+      <td>anika.desai@live.com</td>
+      <td>78901 22345</td>
+      <td>AKDSI2341G</td>
+      <td>₹2,500</td>
+      <td><span class="status pending">Pending</span></td>
+    </tr>
+
+    <tr>
+      <td>Rohit Gupta</td>
+      <td>rohit.gupta@gmail.com</td>
+      <td>90089 55678</td>
+      <td>RHTGP9090Z</td>
+      <td>₹800</td>
+      <td><span class="status active">Active</span></td>
+    </tr>
+
+    <tr>
+      <td>Kavya Sharma</td>
+      <td>kavya.sharma@gmail.com</td>
+      <td>78964 11123</td>
+      <td>KVSHM7130E</td>
+      <td>₹5,000</td>
+      <td><span class="status active">Active</span></td>
+    </tr>
+
+  </tbody>
+</table>
+</div>
+
+</body>
+</html>

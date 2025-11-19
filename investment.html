@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investment Dashboard</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 40px;
+            font-family: Inter, sans-serif;
+            background: url('https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=1600')
+                center/cover no-repeat fixed;
+            color: #fff;
+        }
+
+        .overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.48);
+            backdrop-filter: blur(6px);
+            z-index: -1;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 34px;
+            font-weight: 800;
+            margin-bottom: 35px;
+        }
+
+    
+        .container {
+            max-width: 1100px;
+            margin: auto;
+        }
+
+       
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 18px;
+            padding: 24px;
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255,255,255,0.12);
+            box-shadow: 0 0 18px rgba(0,0,0,0.25);
+        }
+
+        .card h3 {
+            margin: 0 0 10px;
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        .card p {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+
+      
+        .sip-box {
+            background: rgba(255,255,255,0.08);
+            padding: 25px;
+            border-radius: 16px;
+            margin: 35px 0;
+            border: 1px solid rgba(255,255,255,0.12);
+            backdrop-filter: blur(8px);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: 600;
+        }
+
+        .input {
+            width: 100%;
+            padding: 12px;
+            border-radius: 10px;
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            color: #fff;
+            margin-bottom: 16px;
+        }
+
+        input::placeholder {
+            color: rgba(255,255,255,0.6);
+        }
+
+        .btn {
+            padding: 12px;
+            border-radius: 10px;
+            background: #2bd4a9;
+            border: none;
+            font-weight: 700;
+            font-size: 16px;
+            cursor: pointer;
+            color: #00352d;
+            width: 100%;
+        }
+
+      
+        .funds-table {
+            width: 100%;
+            margin-top: 25px;
+            border-collapse: collapse;
+            background: rgba(255,255,255,0.08);
+            backdrop-filter: blur(6px);
+            border-radius: 14px;
+            overflow: hidden;
+        }
+
+        .funds-table thead {
+            background: rgba(255,255,255,0.18);
+        }
+
+        .funds-table th, .funds-table td {
+            padding: 14px;
+            font-size: 15px;
+            border-bottom: 1px solid rgba(255,255,255,0.12);
+        }
+
+        .funds-table tr:hover {
+            background: rgba(255,255,255,0.15);
+            transition: 0.3s;
+        }
+    </style>
+</head>
+<body>
+
+<div class="overlay"></div>
+
+<h1>Investment Dashboard</h1>
+
+<div class="container">
+    <div class="cards">
+        <div class="card">
+            <h3>Total Invested</h3>
+            <p>₹45,000</p>
+        </div>
+
+        <div class="card">
+            <h3>Current Value</h3>
+            <p>₹52,800</p>
+        </div>
+
+        <div class="card">
+            <h3>Overall Returns</h3>
+            <p>₹7,800 (17.3%)</p>
+        </div>
+    </div>
+
+    <!-- SIP CALCULATOR UI -->
+    <div class="sip-box">
+        <h2 style="margin-bottom: 18px;">SIP Investment Calculator</h2>
+
+        <label>Monthly SIP Amount</label>
+        <input type="number" class="input" placeholder="Enter amount (e.g., 2000)" />
+
+        <label>Investment Duration (Years)</label>
+        <input type="number" class="input" placeholder="Enter duration (e.g., 5)" />
+
+        <label>Expected Return (% per year)</label>
+        <input type="number" class="input" placeholder="Enter rate (e.g., 12)" />
+
+        <button class="btn">Calculate</button>
+    </div>
+
+    <!-- POPULAR FUNDS LIST -->
+    <h2 style="margin-top: 20px;">Popular Mutual Funds</h2>
+
+    <table class="funds-table">
+        <thead>
+            <tr>
+                <th>Fund Name</th>
+                <th>3-Year Returns</th>
+                <th>5-Year Returns</th>
+                <th>Risk Level</th>
+                <th>Category</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Axis Bluechip Fund</td>
+                <td>16.2%</td>
+                <td>18.9%</td>
+                <td>Moderate</td>
+                <td>Equity Large Cap</td>
+            </tr>
+
+            <tr>
+                <td>SBI Small Cap Fund</td>
+                <td>27.5%</td>
+                <td>29.8%</td>
+                <td>High</td>
+                <td>Small Cap</td>
+            </tr>
+
+            <tr>
+                <td>HDFC Balanced Advantage</td>
+                <td>12.4%</td>
+                <td>14.2%</td>
+                <td>Low</td>
+                <td>Hybrid</td>
+            </tr>
+
+            <tr>
+                <td>Nippon Growth Fund</td>
+                <td>20.8%</td>
+                <td>23.7%</td>
+                <td>High</td>
+                <td>Equity Mid Cap</td>
+            </tr>
+
+        </tbody>
+    </table>
+
+</div>
+
+</body>
+</html>

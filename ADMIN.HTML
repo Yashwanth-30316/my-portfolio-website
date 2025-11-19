@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Admin Dashboard</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <style>
+    :root {
+      --accent: #2bd4a9;
+      --bg-dark: #0e1b1b;
+      --white: #ffffff;
+      --card-bg: rgba(255, 255, 255, 0.08);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Inter, sans-serif;
+    }
+
+    body {
+      display: flex;
+      background: #0e1b1b;
+      color: var(--white);
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .sidebar {
+      width: 240px;
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(6px);
+      padding: 20px;
+      border-right: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .sidebar h2 {
+      font-size: 22px;
+      margin-bottom: 25px;
+      text-align: center;
+    }
+
+    .menu a {
+      display: block;
+      padding: 12px 14px;
+      text-decoration: none;
+      color: var(--white);
+      margin-bottom: 10px;
+      border-radius: 8px;
+      transition: 0.2s;
+    }
+
+    .menu a:hover,
+    .active {
+      background: var(--accent);
+      color: #00352c;
+      font-weight: 600;
+    }
+
+    .main {
+      flex: 1;
+      padding: 25px;
+      overflow-y: auto;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 25px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: var(--card-bg);
+      padding: 18px;
+      border-radius: 12px;
+      text-align: center;
+      transition: 0.2s;
+    }
+
+    .card:hover {
+      transform: scale(1.03);
+    }
+
+    .chart {
+      margin-top: 30px;
+      background: var(--card-bg);
+      padding: 25px;
+      border-radius: 12px;
+      height: 350px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="sidebar">
+    <h2>Mutual Fund</h2>
+
+    <div class="menu">
+      <a class="active">Dashboard</a>
+      <a href="users.html">Users</a>
+      <a href="investment.html">Investments</a>
+      <a href="trans.html">Transactions</a>
+      <a href="settings.html">Settings</a>
+      <a href="login.html">Logout</a>
+    </div>
+  </div>
+
+  <div class="main">
+
+    <div class="topbar">
+      <h1>Dashboard</h1>
+      <div class="profile">👤 Admin</div>
+    </div>
+
+    <div class="cards">
+      <div class="card">
+        <h3>₹1,20,000</h3>
+        <p>Total Investments</p>
+      </div>
+      <div class="card">
+        <h3>320</h3>
+        <p>Total Users</p>
+      </div>
+      <div class="card">
+        <h3>₹45,000</h3>
+        <p>Monthly SIP Inflow</p>
+      </div>
+      <div class="card">
+        <h3>12</h3>
+        <p>Active Funds</p>
+      </div>
+    </div>
+
+    <div class="chart">
+  <h2 style="margin-bottom:10px;">Portfolio Performance</h2>
+  <img src="image.png" 
+       alt="Chart Image" 
+       style="width:100%; height:250px; object-fit:contain; border-radius:10px;">
+</div>
+
+
+  </div>
+
+  
+
+</body>
+
+</html>

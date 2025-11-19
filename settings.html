@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: url('https://images.pexels.com/photos/6771607/pexels-photo-6771607.jpeg') center/cover no-repeat;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(4px);
+        }
+
+        .container {
+            width: 430px;
+            padding: 30px;
+            background: rgba(255,255,255,0.18);
+            border-radius: 18px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 0 15px rgba(0,0,0,0.3);
+        }
+
+        h2 {
+            text-align: center;
+            color: white;
+            font-size: 28px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        label {
+            color: white;
+            font-weight: bold;
+            display: block;
+            margin-top: 18px;
+            margin-bottom: 6px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 12px;
+            border-radius: 10px;
+            border: none;
+            outline: none;
+            background: rgba(255,255,255,0.25);
+            color: white;
+        }
+
+        input::placeholder {
+            color: #eee;
+        }
+
+        .btn {
+            width: 100%;
+            margin-top: 25px;
+            padding: 12px;
+            border: none;
+            border-radius: 10px;
+            background: #1a73e8;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #165bb6;
+            transform: scale(1.03);
+        }
+
+        .back {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .back a {
+            color: #fff;
+            text-decoration: underline;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="container">
+        <h2>Settings</h2>
+
+        <form action="#">
+
+            <label>Change Username</label>
+            <input type="text" placeholder="Enter new username">
+
+            <label>Change Email</label>
+            <input type="email" placeholder="Enter new email">
+
+            <label>Change Password</label>
+            <input type="password" placeholder="Enter new password">
+
+            <label>Theme</label>
+            <select>
+                <option>Default Blue</option>
+                <option>Dark Theme</option>
+                <option>Green Theme</option>
+                <option>Gold Premium Theme</option>
+            </select>
+
+            <label>Notifications</label>
+            <select>
+                <option>Enabled</option>
+                <option>Disabled</option>
+            </select>
+
+            <button class="btn">Save Settings</button>
+
+            <div class="back">
+                <a href="admin.html">← Back to Dashboard</a>
+            </div>
+
+        </form>
+    </div>
+
+</body>
+</html>
